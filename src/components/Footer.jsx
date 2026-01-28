@@ -4,6 +4,7 @@ import {
   FaInstagram,
   FaTiktok,
   FaWhatsapp,
+  FaGlobe,
   FaEnvelope,
 } from "react-icons/fa";
 
@@ -24,22 +25,22 @@ export default function Footer() {
             <p className="mb-1 flex items-center gap-2">
               <FaWhatsapp className="w-7 h-7 sm:w-7 sm:h-7" />
               <a
-                href="https://wa.me/6285189953855?text=Halo,%20saya%20ingin%20bertanya%20tentang%20desain"
+                href="https://wa.me/6285950029053?text=Halo,%20saya%20ingin%20bertanya%20tentang%20penggunaan%20Gudangin."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:text-green-600 transition-colors"
               >
-                +62 851-8995-3855
+                +62 859-5002-9053
               </a>{" "}
             </p>
             <p className="mb-1 flex items-center gap-2">Email : </p>
             <p className="mb-1 flex items-center gap-2">
               <FaEnvelope className="w-7 h-7 sm:w-7 sm:h-7" />
               <a
-                href="mailto:nocturnity.creative@gmail.com"
+                href="mailto:galakteknusantara@gmail.com"
                 className="text-purple-400 hover:text-purple-300 transition-colors"
               >
-                nocturnity.creative@gmail.com
+                galakteknusantara@gmail.com
               </a>
             </p>
           </div>
@@ -48,6 +49,15 @@ export default function Footer() {
         {/* Sosial media */}
         <div className="flex flex-col items-center md:items-end gap-3">
           <div className="flex gap-4 sm:gap-6">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://galakteknusantara.vercel.app/"
+              className="hover:text-white hover:scale-110 transition-all duration-200"
+              aria-label="Instagram"
+            >
+              <FaGlobe className="w-7 h-7 sm:w-8 sm:h-8" />
+            </a>
             <a
               href="#"
               className="hover:text-white hover:scale-110 transition-all duration-200"
@@ -58,7 +68,7 @@ export default function Footer() {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/nocturnitycreative/"
+              href="https://www.instagram.com/galaktek_nusantara/"
               className="hover:text-white hover:scale-110 transition-all duration-200"
               aria-label="Instagram"
             >
@@ -73,7 +83,7 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-xs sm:text-sm text-gray-400 text-center">
-            © {new Date().getFullYear()} by Nocturnity Creative
+            © {new Date().getFullYear()} by Galaksi Teknologi Nusantara
           </p>
         </div>
       </div>

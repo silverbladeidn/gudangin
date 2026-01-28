@@ -1,29 +1,44 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Hero() {
-  // Fungsi untuk scroll ke section berikutnya
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Array gambar untuk slideshow (ganti dengan URL gambar Anda)
+  const images = [
+    "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1200",
+    "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200",
+    "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=1200",
+  ];
+
+  // Auto slide setiap 5 detik
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   const handleScroll = () => {
-    const nextSection = document.getElementById("services"); // ubah ID sesuai section berikutnya
+    const nextSection = document.getElementById("services");
     if (nextSection) {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
   };
-  const location = useLocation();
-  const navigate = useNavigate();
 
   const handleScrollTo = (id) => {
     if (location.pathname !== "/") {
-      // kalau bukan di halaman home, pindah dulu ke home
       navigate("/");
-
-      // kasih jeda sedikit agar halaman home sempat render dulu
       setTimeout(() => {
         const section = document.querySelector(id);
         if (section) section.scrollIntoView({ behavior: "smooth" });
       }, 300);
     } else {
-      // kalau sudah di home, langsung scroll
       const section = document.querySelector(id);
       if (section) section.scrollIntoView({ behavior: "smooth" });
     }
@@ -34,56 +49,59 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex flex-col justify-center items-center lg:items-start text-center lg:text-start overflow-hidden pt-20 pb-20 md:py-24 px-4 sm:px-6 lg:px-8"
     >
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-blue-700 -z-10"></div>
-
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Lingkaran Latar Animasi - Responsive */}
-        <div className="absolute top-10 left-4 w-64 h-64 md:top-20 md:left-10 md:w-96 md:h-96 bg-red-500 rounded-full filter blur-3xl opacity-100 animate-blob"></div>
-
-        <div className="absolute top-20 right-4 w-64 h-64 md:top-40 md:right-10 md:w-96 md:h-96 bg-yellow-400 rounded-full filter blur-3xl opacity-100 animate-blob animation-delay-2000"></div>
-
-        <div className="absolute -bottom-8 left-8 w-64 h-64 md:-bottom-8 md:left-20 md:w-96 md:h-96 bg-blue-400 rounded-full filter blur-3xl opacity-100 animate-blob animation-delay-4000"></div>
+      {/* Background Images dengan Fading */}
+      <div className="absolute inset-0 -z-10">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+            style={{
+              backgroundImage: `url(${image})`,
+            }}
+          />
+        ))}
       </div>
 
-      {/* Konten Utama */}
-      <div className="relative z-10 lg:pl-16 xl:pl-[200px] max-w-3xl w-full mb-8 md:mb-0">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 md:mb-6 leading-tight drop-shadow-lg">
-          Nocturnity
-          <br />
-          Creative
+      {/* Overlay Gradient untuk readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 via-green-800/75 to-transparent -z-5"></div>
+      <div className="absolute inset-0 bg-black/30 -z-5"></div>
+
+      {/* Konten Utama dengan animasi fadeSlideUp */}
+      <div className="relative z-10 lg:pl-16 xl:pl-[200px] max-w-3xl w-full mb-8 md:mb-0 animate-fadeSlideUp">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 md:mb-6 leading-tight drop-shadow-2xl">
+          Gudangin
         </h1>
 
-        <p className="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed drop-shadow-md">
-          Buat kami, desain bukan cuma soal estetika. Desain adalah cara brand
-          berbicara, membangun citra, dan mewakilkan audiensnya melalui pesan
-          komunikasi.
+        <p className="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed drop-shadow-lg">
+          Solusi penyimpanan online yang aman, praktis, dan terpercaya untuk
+          mendukung kebutuhan perusahaan, institusi pendidikan, dan bisnis.{" "}
         </p>
 
         {/* Tombol CTA */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
           <button
             onClick={() => handleScrollTo("#services")}
-            className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-blue-600 rounded-lg font-bold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            className="px-6 py-3 sm:px-8 sm:py-4 bg-green-600 text-white rounded-lg font-bold text-base sm:text-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
           >
             Mulai Sekarang
           </button>
 
           <button
-            onClick={() => handleScrollTo("#portfolio")}
-            className="px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white rounded-lg font-bold text-base sm:text-lg hover:bg-white hover:text-blue-600 transition-all duration-300 transform hover:scale-105"
+            onClick={() => handleScrollTo("#packages")}
+            className="px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white rounded-lg font-bold text-base sm:text-lg hover:bg-white hover:text-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Pelajari Lebih Lanjut
           </button>
         </div>
       </div>
 
-      {/* Scroll Indicator (ikon panah) - Diperbaiki posisinya */}
+      {/* Scroll Indicator */}
       <button
         onClick={handleScroll}
         aria-label="Scroll ke bawah"
-        className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white"
+        className="absolute bottom-6 sm:bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white z-10"
       >
         <svg
           className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8"
@@ -102,22 +120,19 @@ export default function Hero() {
 
       {/* Custom Animation Styles */}
       <style>{`
-        @keyframes blob {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(30px, -50px) scale(1.1); }
-          66% { transform: translate(-20px, 20px) scale(0.9); }
+        @keyframes fadeSlideUp {
+          0% {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-
-        .animation-delay-4000 {
-          animation-delay: 4s;
+        .animate-fadeSlideUp {
+          animation: fadeSlideUp 0.8s ease-out forwards;
         }
       `}</style>
     </section>

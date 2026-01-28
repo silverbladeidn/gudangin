@@ -36,15 +36,15 @@ const Navbar = () => {
           onClick={() => handleScrollTo("#hero")}
           className="flex items-center space-x-3 group focus:outline-none"
         >
-          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-600 rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-600 rounded-full flex items-center justify-center">
             <img
               src="/NocturnityLogo.png" // ganti dengan logo di public/
               alt="Nocturnity Logo"
               className="h-10 object-contain"
             />
           </div>
-          <h1 className="text-2xl font-bold text-blue-300 group-hover:text-blue-200 transition">
-            Nocturnity
+          <h1 className="text-2xl font-bold text-green-300 group-hover:text-green-200 transition">
+            Gudangin
           </h1>
         </button>
         {/* Desktop Menu */}
@@ -52,33 +52,33 @@ const Navbar = () => {
           <li>
             <button
               onClick={() => handleScrollTo("#services")}
-              className="hover:text-blue-400 transition focus:outline-none focus:ring-0 focus-visible:ring-0 ring-0 outline-none"
+              className="hover:text-green-400 transition focus:outline-none focus:ring-0 focus-visible:ring-0 ring-0 outline-none"
             >
-              Layanan
+              Tentang Gudangin
             </button>
           </li>
           <li>
             <button
-              onClick={() => handleScrollTo("#portfolio")}
-              className="hover:text-blue-400 transition focus:outline-none focus:ring-0 focus-visible:ring-0 ring-0 outline-none"
+              onClick={() => handleScrollTo("#packages")}
+              className="hover:text-green-400 transition focus:outline-none focus:ring-0 focus-visible:ring-0 ring-0 outline-none"
             >
-              Portfolio
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => handleScrollTo("#aboutme")}
-              className="hover:text-blue-400 transition focus:outline-none focus:ring-0 focus-visible:ring-0 ring-0 outline-none"
-            >
-              About Me
+              Paket
             </button>
           </li>
           <li>
             <Link
               to="/contact-us"
-              className="px-6 lg:px-8 py-2 lg:py-3 bg-blue-600 rounded-full font-semibold hover:bg-blue-700 hover:text-white transition-colors focus:outline-none"
+              className="hover:text-green-400 transition focus:outline-none focus:ring-0 focus-visible:ring-0 ring-0 outline-none"
             >
               Kontak Kami
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact-us"
+              className="px-6 lg:px-8 py-2 lg:py-3 bg-green-600 rounded-full font-semibold hover:bg-green-700 hover:text-white transition-colors focus:outline-none"
+            >
+              Login
             </Link>
           </li>
         </ul>
@@ -98,25 +98,33 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => handleScrollTo("#services")}
-                className="block w-full text-left px-4 py-3 rounded-lg hover:bg-white/10 hover:text-blue-400 transition focus:outline-none"
+                className="block w-full text-left px-4 py-3 rounded-lg hover:bg-white/10 hover:text-green-400 transition focus:outline-none"
               >
-                Layanan
+                Tentang Gudangin
               </button>
             </li>
             <li>
               <button
-                onClick={() => handleScrollTo("#portfolio")}
-                className="block w-full text-left px-4 py-3 rounded-lg hover:bg-white/10 hover:text-blue-400 transition focus:outline-none"
+                onClick={() => handleScrollTo("#packages")}
+                className="block w-full text-left px-4 py-3 rounded-lg hover:bg-white/10 hover:text-green-400 transition focus:outline-none"
               >
-                Portfolio
+                Paket
               </button>
+            </li>
+            <li>
+              <Link
+                to="/contact-us"
+                className="block w-full text-left px-4 py-3 rounded-lg hover:bg-white/10 hover:text-green-400 transition focus:outline-none"
+              >
+                Kontak Kami
+              </Link>
             </li>
             <li className="mt-2">
               <Link
                 to="/contact-us"
-                className="flex items-center justify-center w-full px-4 py-3 bg-blue-600 rounded-lg font-semibold hover:bg-blue-700  hover:text-white transition-colors focus:outline-none text-center"
+                className="flex items-center justify-center w-full px-4 py-3 bg-green-600 rounded-lg font-semibold hover:bg-green-700  hover:text-white transition-colors focus:outline-none text-center"
               >
-                Kontak Kami
+                Login
               </Link>
             </li>
           </ul>

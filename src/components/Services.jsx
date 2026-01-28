@@ -6,34 +6,34 @@ const servicesData = [
   {
     id: 1,
     icon: <Palette size={48} />,
-    title: "Social Media Design",
-    desc: "Membuat desain visual kreatif untuk branding dan promosi via media sosial yang menarik dan profesional.",
+    title: "Permintaan Barang (PR)",
+    desc: "User dapat mengajukan permintaan barang secara terstruktur melalui Purchase Request (PR), lengkap dengan detail kebutuhan dan catatan, tanpa harus komunikasi manual.",
     image:
-      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1661439623518-f151930152ec?w=600&h=400&fit=crop",
   },
   {
     id: 2,
-    icon: <Video size={48} />,
-    title: "Produksi Video",
-    desc: "Video profesional untuk kebutuhan iklan, konten, dan profil perusahaan dengan kualitas sinematik.",
+    icon: <Megaphone size={48} />,
+    title: "Kontrol Persetujuan Terpusat",
+    desc: "Seluruh persetujuan pembelian dikontrol langsung oleh Superadmin, memastikan tidak ada pembelian tanpa izin dan semua keputusan tercatat dengan jelas.",
     image:
-      "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
   },
   {
     id: 3,
     icon: <MonitorPlay size={48} />,
-    title: "Content Strategy",
-    desc: "Perencanaan konten yang maksimal dapat mencapai tujuan bisnis yang lebih sempurna.",
+    title: "Konversi PR ke PO",
+    desc: "Purchase Request yang disetujui dapat langsung dikonversi menjadi Purchase Order (PO) oleh Superadmin, sehingga proses pengadaan lebih cepat, rapi, dan terkontrol.",
     image:
-      "https://images.unsplash.com/photo-1532622785990-d2c36a76f5a6?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
   },
   {
     id: 4,
-    icon: <Megaphone size={48} />,
-    title: "Branding Support",
-    desc: "Membantu pemasaran bisnis agar dapat menjadikan merek mereka sebagai highlight di pasaran.",
+    icon: <Video size={48} />,
+    title: "Audit & Riwayat Transaksi",
+    desc: "Semua aktivitas pengadaan tersimpan dalam riwayat sistem, mulai dari pengajuan, persetujuan, hingga PO, sehingga mudah diaudit dan dipertanggungjawabkan.",
     image:
-      "https://images.unsplash.com/photo-1613909207039-6b173b755cc1?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?w=600&h=400&fit=crop",
   },
 ];
 
@@ -51,10 +51,11 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4 relative inline-block">
-            Layanan Kami
+            Kenapa Gudangin?
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Solusi lengkap untuk kebutuhan digital dan kreatif Anda
+            Gudangin membantu mengontrol permintaan dan pembelian barang dengan
+            alur yang rapi, terpusat, dan mudah diaudit.
           </p>
         </div>
 
@@ -66,7 +67,7 @@ const Services = () => {
               onClick={() => setActiveService(srv.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 ${
                 activeService === srv.id
-                  ? "bg-blue-600 text-white shadow-lg scale-105"
+                  ? "bg-green-600 text-white shadow-lg scale-105"
                   : "bg-gray-700 text-gray-300 hover:bg-gray-600"
               }`}
             >
@@ -95,18 +96,18 @@ const Services = () => {
               {/* Teks kanan */}
               <div className="text-left">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="text-blue-400">{active.icon}</div>
+                  <div className="text-green-400">{active.icon}</div>
                   <div>
                     <h3 className="text-4xl font-bold relative pb-2 inline-block">
                       {active.title}
-                      <span className="absolute left-0 bottom-0 w-16 h-[3px] bg-blue-500 rounded-full"></span>
+                      <span className="absolute left-0 bottom-0 w-16 h-[3px] bg-green-500 rounded-full"></span>
                     </h3>
                   </div>
                 </div>
                 <p className="text-gray-300 text-lg leading-relaxed mb-8">
                   {active.desc}
                 </p>
-                <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                <button className="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
                   Pelajari Lebih Lanjut
                 </button>
               </div>
@@ -119,15 +120,15 @@ const Services = () => {
                   <div>
                     <h3 className="text-4xl font-bold relative pb-2 inline-block">
                       {active.title}
-                      <span className="absolute right-0 bottom-0 w-16 h-[3px] bg-blue-500 rounded-full"></span>
+                      <span className="absolute right-0 bottom-0 w-16 h-[3px] bg-green-500 rounded-full"></span>
                     </h3>
                   </div>
-                  <div className="text-blue-400">{active.icon}</div>
+                  <div className="text-green-400">{active.icon}</div>
                 </div>
                 <p className="text-gray-300 text-lg leading-relaxed mb-8">
                   {active.desc}
                 </p>
-                <button className="px-8 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                <button className="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
                   Pelajari Lebih Lanjut
                 </button>
               </div>

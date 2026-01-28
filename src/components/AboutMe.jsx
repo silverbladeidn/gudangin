@@ -25,37 +25,54 @@ export default function AboutMe() {
       {/* Content */}
       <div className="max-w-4xl mx-auto text-center px-6 md:px-12">
         <h2 className="text-3xl md:text-4xl font-bold text-black drop-shadow-lg mb-6">
-          Tentang Kami
+          Tentang Gudangin
         </h2>
+
         <p className="text-black leading-relaxed">
-          Kami <strong>Nocturnity Creative</strong> yaitu sebuah creative agency
-          yang fokus membantu brand membangun identitas digital lewat desain
-          grafis, video editing, hingga strategi konten.
+          <strong>Gudangin</strong> adalah aplikasi manajemen inventori dan
+          pengadaan barang yang dirancang untuk membantu bisnis, kantor, dan
+          organisasi mengontrol proses permintaan hingga pembelian barang secara
+          rapi dan terpusat.
           <br />
           <br />
-          Buat kami, desain bukan cuma soal estetika. Desain adalah cara brand
-          berbicara, membangun citra, dan mewakilkan audiensnya melalui pesan
-          komunikasi. Lewat Nocturnity Creative, kami hadir untuk:
+          Kami percaya bahwa pengelolaan inventaris bukan sekadar mencatat stok,
+          tetapi memastikan setiap permintaan barang tercatat, disetujui, dan
+          dapat dipertanggungjawabkan. Karena itu, Gudangin menghadirkan alur
+          pengadaan yang jelas mulai dari <strong>
+            Purchase Request (PR)
+          </strong>{" "}
+          hingga
+          <strong> Purchase Order (PO)</strong> dengan kontrol penuh di tangan
+          Superadmin.
           <br />
           <br />
-          ✅ Bikin konten sosial media lebih menarik & konsisten
+          Melalui Gudangin, kamu bisa:
           <br />
-          ✅ Menghidupkan brand lewat desain & video yang engaging
           <br />
-          ✅ Bantu kamu punya strategi konten yang relevan
+          ✅ Mengajukan permintaan barang secara terstruktur (PR)
           <br />
-          <br />✨ Ini baru langkah pertama kami. Yuk ikutin perjalanan{" "}
-          <span className="font-semibold">@NocturnityCreative</span> 🚀
+          ✅ Mengontrol persetujuan pembelian langsung oleh Superadmin
           <br />
-          Dapatkan insight desain, tips branding, dan lihat karya-karya terbaru
-          dari tim kami.
+          ✅ Mengonversi PR menjadi PO dengan alur yang jelas & tercatat
           <br />
-          👉 Ready to grow with us? DM kami sekarang!
+          ✅ Mencegah pembelian tidak terkontrol dengan sistem audit yang rapi
+          <br />
+          <br />
+          Gudangin cocok digunakan oleh UMKM, sekolah, yayasan, hingga
+          perusahaan skala kecil–menengah yang membutuhkan sistem pengadaan
+          sederhana namun tetap profesional.
+          <br />
+          <br />
+          ✨ Gudangin terus berkembang sebagai solusi kontrol inventaris dan
+          pengadaan yang praktis, transparan, dan mudah digunakan.
+          <br />
+          👉 Siap mengelola inventori & pembelian dengan lebih tertib? Mulai
+          bersama Gudangin sekarang.
           <br />
           <br />
           <span className="text-black font-semibold">
-            #creativeagency #socialmediadesign #videoediting #brandingagency
-            #NocturnityCreative
+            #Gudangin #ManajemenInventori #PurchaseRequest #PurchaseOrder
+            #ProcurementSystem #InventoryManagement
           </span>
         </p>
       </div>
