@@ -120,12 +120,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="mt-2">
-              <Link
-                to="/contact-us"
+              <a
+              href="https://admin.goodong.id/"
                 className="flex items-center justify-center w-full px-4 py-3 bg-green-600 rounded-lg font-semibold hover:bg-green-700  hover:text-white transition-colors focus:outline-none text-center"
               >
                 Login
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
