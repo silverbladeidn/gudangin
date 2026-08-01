@@ -74,12 +74,14 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/contact-us"
+            <a
+              href="https://admin.goodong.id/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 lg:px-8 py-2 lg:py-3 bg-green-600 rounded-full font-semibold hover:bg-green-700 hover:text-white transition-colors focus:outline-none"
             >
               Login
-            </Link>
+            </a>
           </li>
         </ul>
         {/* Mobile Menu Button */}
@@ -121,7 +123,7 @@ const Navbar = () => {
             </li>
             <li className="mt-2">
               <a
-              href="https://admin.goodong.id/"
+                href="https://admin.goodong.id/"
                 className="flex items-center justify-center w-full px-4 py-3 bg-green-600 rounded-lg font-semibold hover:bg-green-700  hover:text-white transition-colors focus:outline-none text-center"
               >
                 Login
