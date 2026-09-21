@@ -1,39 +1,61 @@
 import React, { useState } from "react";
-import { Palette, Video, MonitorPlay, Megaphone } from "lucide-react";
+import { HandHelping, Logs, Package, Handshake, BadgeDollarSign, ChartColumnIncreasing } from "lucide-react";
 import "./animation.css"; // tambahkan file CSS ini (lihat bawah)
 
 const servicesData = [
   {
     id: 1,
-    icon: <Palette size={48} />,
-    title: "Permintaan Barang (PR)",
-    desc: "User dapat mengajukan permintaan barang secara terstruktur melalui Purchase Request (PR), lengkap dengan detail kebutuhan dan catatan, tanpa harus komunikasi manual.",
+    icon: <Package size={48} />,
+    title: "Pendataan Barang ke Sistem",
+    desc: "Hanya dengan mengisi formulir pendataan barang, data dapat tersimpan secara sistematis di Goodong.id.",
     image:
-      "https://plus.unsplash.com/premium_photo-1661439623518-f151930152ec?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+    link: "https://admin.goodong.id",
   },
   {
     id: 2,
-    icon: <Megaphone size={48} />,
-    title: "Kontrol Persetujuan Terpusat",
-    desc: "Seluruh persetujuan pembelian dikontrol langsung oleh Superadmin, memastikan tidak ada pembelian tanpa izin dan semua keputusan tercatat dengan jelas.",
+    icon: <Logs size={48} />,
+    title: "Stock Opname & Riwayat",
+    desc: "Segala aktivitas pemasukan dan pengeluaran barang tercatat secara sistematis, sehingga memudahkan audit dan pelacakan.",
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?w=600&h=400&fit=crop",
+    link: "https://admin.goodong.id",
   },
   {
     id: 3,
-    icon: <MonitorPlay size={48} />,
+    icon: <HandHelping size={48} />,
+    title: "Permintaan Barang (PR)",
+    desc: "Dapat mengajukan permintaan barang secara terstruktur melalui Purchase Request (PR), lengkap dengan detail kebutuhan dan catatan.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1661439623518-f151930152ec?w=600&h=400&fit=crop",
+    link: "https://admin.goodong.id",
+  },
+  {
+    id: 4,
+    icon: <Handshake size={48} />,
     title: "Konversi PR ke PO",
     desc: "Purchase Request yang disetujui dapat langsung dikonversi menjadi Purchase Order (PO) oleh Superadmin, sehingga proses pengadaan lebih cepat, rapi, dan terkontrol.",
     image:
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+    link: "https://admin.goodong.id",
   },
   {
-    id: 4,
-    icon: <Video size={48} />,
-    title: "Audit & Riwayat Transaksi",
-    desc: "Semua aktivitas pengadaan tersimpan dalam riwayat sistem, mulai dari pengajuan, persetujuan, hingga PO, sehingga mudah diaudit dan dipertanggungjawabkan.",
+    id: 5,
+    icon: <BadgeDollarSign size={48} />,
+    title: "Point Of Sale (POS)",
+    desc: "Proses penjualan dapat dilakukan secara digital dan dilengkapi dengan fitur pembayaran dan tampilan barang secara interaktif.",
     image:
-      "https://images.unsplash.com/photo-1600267165477-6d4cc741b379?w=600&h=400&fit=crop",
+      "https://images.unsplash.com/photo-1556742111-a301076d9d18?w=600&h=400&fit=crop",
+    link: "https://pos.goodong.id",
+  },
+  {
+    id: 6,
+    icon: <ChartColumnIncreasing size={48} />,
+    title: "Sistem Dashboard yang Interaktif dan Informatif",
+    desc: "Dengan disajikan dalam bentuk grafik dan log aktivitas, dashboard menjadi sumber informasi yang mudah dipahami oleh para pengguna.",
+    image:
+      "https://plus.unsplash.com/premium_photo-1682309553075-c84ea8d9d49a?w=600&h=400&fit=crop",
+    link: "https://admin.goodong.id",
   },
 ];
 
@@ -51,10 +73,10 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4 relative inline-block">
-            Kenapa Gudangin?
+            Kenapa Goodong.id?
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Gudangin membantu mengontrol permintaan dan pembelian barang dengan
+            Goodong.id membantu mengontrol permintaan dan pembelian barang dengan
             alur yang rapi, terpusat, dan mudah diaudit.
           </p>
         </div>
@@ -107,7 +129,7 @@ const Services = () => {
                 <p className="text-gray-300 text-lg leading-relaxed mb-8">
                   {active.desc}
                 </p>
-                <button className="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                <button onClick={() => window.open(active.link, "_blank")} className="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
                   Pelajari Lebih Lanjut
                 </button>
               </div>
@@ -128,7 +150,7 @@ const Services = () => {
                 <p className="text-gray-300 text-lg leading-relaxed mb-8">
                   {active.desc}
                 </p>
-                <button className="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                <button onClick={() => window.open(active.link, "_blank")} className="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
                   Pelajari Lebih Lanjut
                 </button>
               </div>

@@ -25,11 +25,11 @@ export default function AboutMe() {
       {/* Content */}
       <div className="max-w-4xl mx-auto text-center px-6 md:px-12">
         <h2 className="text-3xl md:text-4xl font-bold text-black drop-shadow-lg mb-6">
-          Tentang Gudangin
+          Tentang Goodong.id
         </h2>
 
         <p className="text-black leading-relaxed">
-          <strong>Gudangin</strong> adalah aplikasi manajemen inventori dan
+          <strong>Goodong.id</strong> adalah aplikasi manajemen inventori dan
           pengadaan barang yang dirancang untuk membantu bisnis, kantor, dan
           organisasi mengontrol proses permintaan hingga pembelian barang secara
           rapi dan terpusat.
@@ -37,7 +37,7 @@ export default function AboutMe() {
           <br />
           Kami percaya bahwa pengelolaan inventaris bukan sekadar mencatat stok,
           tetapi memastikan setiap permintaan barang tercatat, disetujui, dan
-          dapat dipertanggungjawabkan. Karena itu, Gudangin menghadirkan alur
+          dapat dipertanggungjawabkan. Karena itu, Goodong.id menghadirkan alur
           pengadaan yang jelas mulai dari <strong>
             Purchase Request (PR)
           </strong>{" "}
@@ -46,7 +46,7 @@ export default function AboutMe() {
           Superadmin.
           <br />
           <br />
-          Melalui Gudangin, kamu bisa:
+          Melalui Goodong.id, kamu bisa:
           <br />
           <br />
           ✅ Mengajukan permintaan barang secara terstruktur (PR)
@@ -58,20 +58,20 @@ export default function AboutMe() {
           ✅ Mencegah pembelian tidak terkontrol dengan sistem audit yang rapi
           <br />
           <br />
-          Gudangin cocok digunakan oleh UMKM, sekolah, yayasan, hingga
+          Goodong.id cocok digunakan oleh UMKM, sekolah, yayasan, hingga
           perusahaan skala kecil–menengah yang membutuhkan sistem pengadaan
           sederhana namun tetap profesional.
           <br />
           <br />
-          ✨ Gudangin terus berkembang sebagai solusi kontrol inventaris dan
+          Goodong.id terus berkembang sebagai solusi kontrol inventaris dan
           pengadaan yang praktis, transparan, dan mudah digunakan.
           <br />
-          👉 Siap mengelola inventori & pembelian dengan lebih tertib? Mulai
-          bersama Gudangin sekarang.
+          Siap mengelola inventori & pembelian dengan lebih tertib? Mulai
+          bersama Goodong.id sekarang.
           <br />
           <br />
           <span className="text-black font-semibold">
-            #Gudangin #ManajemenInventori #PurchaseRequest #PurchaseOrder
+            #Goodong.id #ManajemenInventori #PurchaseRequest #PurchaseOrder
             #ProcurementSystem #InventoryManagement
           </span>
         </p>

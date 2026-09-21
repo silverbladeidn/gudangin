@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { Palette, Video, MonitorPlay, Megaphone } from "lucide-react";
 import "./animation.css"; // tambahkan file CSS ini (lihat bawah)
 
 const servicesData = [
   {
     id: 1,
-    icon: <Palette size={48} />,
     title: "Gratis",
     price: "Rp 0",
     desc: "Cocok untuk tim kecil yang ingin mulai mengelola pengajuan barang secara rapi tanpa biaya.",
@@ -18,15 +16,13 @@ const servicesData = [
     ],
     image:
       "https://plus.unsplash.com/premium_photo-1661439623518-f151930152ec?w=600&h=400&fit=crop",
-    cta: "Mulai Gratis",
+    link: "https://admin.goodong.id",
+      cta: "Mulai Gratis",
   },
   {
     id: 2,
-    icon: <Megaphone size={48} />,
-    title: "Basic",
-    oldPrice: "Rp 150.000 / user / bulan",
-    price: "Rp 110.000 / user / bulan",
-    badge: "Hemat 25%",
+    title: "Bulanan/Monthly",
+    price: "Rp 290.000 / user / bulan",
     desc: "Kontrol pengadaan yang lebih rapi dan transparan untuk perusahaan berkembang.",
     features: [
       "Semua fitur Gratis",
@@ -42,11 +38,8 @@ const servicesData = [
   },
   {
     id: 3,
-    icon: <MonitorPlay size={48} />,
-    title: "Enterprise",
-    oldPrice: "Rp 250.000 / user / bulan",
-    price: "Harga Spesial",
-    badge: "Custom Deal",
+    title: "Tahunan/Yearly",
+    price: "Rp 3.500.000 / user / tahun",
     desc: "Solusi pengadaan end-to-end dengan kontrol penuh, siap audit dan skala besar.",
     features: [
       "Semua fitur Basic",
@@ -55,6 +48,7 @@ const servicesData = [
       "Multi role & multi departemen",
       "Custom workflow approval",
       "Integrasi API",
+      "Sistem POS (Point of Sale)",
       "Priority support",
     ],
     image:
@@ -77,10 +71,10 @@ const Services = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold mb-4 relative inline-block">
-            Paket Gudangin
+            Paket Goodong.id
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Anda bisa pilih mau paket apa untuk Gudangin.
+            Anda bisa pilih mau paket apa untuk Goodong.id.
           </p>
         </div>
 
@@ -127,20 +121,6 @@ const Services = () => {
                   </h3>
                 </div>
 
-                {/* Badge */}
-                {active.badge && (
-                  <span className="inline-block mb-3 px-3 py-1 text-xs font-semibold rounded-full bg-green-500/20 text-green-400">
-                    {active.badge}
-                  </span>
-                )}
-
-                {/* Harga lama */}
-                {active.oldPrice && (
-                  <p className="text-gray-400 line-through text-sm mb-1">
-                    {active.oldPrice}
-                  </p>
-                )}
-
                 {/* Harga promo */}
                 {active.price && (
                   <p className="text-green-400 text-2xl font-bold mb-4">
@@ -166,7 +146,8 @@ const Services = () => {
                 )}
 
                 {/* CTA */}
-                <button className="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
+                <button onClick={() => window.open(active.link || servicesData[0].link, "_blank")}
+                className="px-8 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors">
                   {active.cta || "Pelajari Lebih Lanjut"}
                 </button>
               </div>

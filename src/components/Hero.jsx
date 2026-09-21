@@ -71,7 +71,7 @@ export default function Hero() {
       {/* Konten Utama dengan animasi fadeSlideUp */}
       <div className="relative z-10 lg:pl-16 xl:pl-[200px] max-w-3xl w-full mb-8 md:mb-0 animate-fadeSlideUp">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-4 md:mb-6 leading-tight drop-shadow-2xl">
-          Gudangin
+          Goodong.id
         </h1>
 
         <p className="text-base sm:text-lg md:text-xl text-white mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed drop-shadow-lg">

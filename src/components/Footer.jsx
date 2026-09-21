@@ -25,7 +25,7 @@ export default function Footer() {
             <p className="mb-1 flex items-center gap-2">
               <FaWhatsapp className="w-7 h-7 sm:w-7 sm:h-7" />
               <a
-                href="https://wa.me/6285950029053?text=Halo,%20saya%20ingin%20bertanya%20tentang%20penggunaan%20Gudangin."
+                href="https://wa.me/6285950029053?text=Halo,%20saya%20ingin%20bertanya%20tentang%20penggunaan%20Goodong.id."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-medium hover:text-green-600 transition-colors"

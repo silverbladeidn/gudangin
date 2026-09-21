@@ -40,7 +40,7 @@ const Contact = () => {
               />
               <div className="text-sm md:text-base">
                 <a
-                  href="https://wa.me/6285950029053?text=Halo,%20saya%20ingin%20bertanya%20terkait%20masalah%20Gudangin."
+                  href="https://wa.me/6285950029053?text=Halo,%20saya%20ingin%20bertanya%20terkait%20masalah%20Goodong.id."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium hover:text-black transition-colors"

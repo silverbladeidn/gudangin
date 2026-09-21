@@ -44,7 +44,7 @@ const Navbar = () => {
             />
           </div>
           <h1 className="text-2xl font-bold text-green-300 group-hover:text-green-200 transition">
-            Gudangin
+            Goodong.id
           </h1>
         </button>
         {/* Desktop Menu */}
@@ -54,7 +54,7 @@ const Navbar = () => {
               onClick={() => handleScrollTo("#services")}
               className="hover:text-green-400 transition focus:outline-none focus:ring-0 focus-visible:ring-0 ring-0 outline-none"
             >
-              Tentang Gudangin
+              Tentang Goodong.id
             </button>
           </li>
           <li>
@@ -102,7 +102,7 @@ const Navbar = () => {
                 onClick={() => handleScrollTo("#services")}
                 className="block w-full text-left px-4 py-3 rounded-lg hover:bg-white/10 hover:text-green-400 transition focus:outline-none"
               >
-                Tentang Gudangin
+                Tentang Goodong.id
               </button>
             </li>
             <li>
